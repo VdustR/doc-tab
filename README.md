@@ -4,9 +4,9 @@ Edit the doc comments in a new tab.
 
 "Doc Tab" is a Visual Studio Code extension that allows you to edit the doc comments in a new tab.
 
-## The problem
+## The Problem
 
-Editors like VSCode support markdown preview for JSDoc / TSDoc. But it's pretty hard to edit or format, indent it in the comment block. This extension provides a new tab to edit the doc comments.
+Editors like VSCode support markdown preview for JSDoc / TSDoc, but it's often challenging to edit, format, and indent it within the comment block. This extension is designed to assist in editing doc comments in a new tab, providing the benefits of specific language features such as Markdown's syntax highlighting, intelligence, linting, and formatting.
 
 ## Usage
 

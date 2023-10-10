@@ -1,7 +1,7 @@
 {
   "name": "doc-tab",
   "displayName": "Doc Tab",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Edit the doc comments in a new tab.",
   "categories": [
     "Formatters",
