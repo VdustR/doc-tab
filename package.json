@@ -1,0 +1,52 @@
+{
+  "name": "doc-tab",
+  "displayName": "Doc Tab",
+  "version": "0.0.2",
+  "description": "Edit the doc comments in a new tab.",
+  "categories": [
+    "Formatters",
+    "Other"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:VdustR/doc-tab.git"
+  },
+  "license": "MIT",
+  "publisher": "VdustR",
+  "main": "./out/extension.js",
+  "scripts": {
+    "compile": "tsc -p ./",
+    "lint": "eslint src --ext ts",
+    "pretest": "npm run compile && npm run lint",
+    "test": "node ./out/test/runTest.js",
+    "vscode:prepublish": "npm run compile",
+    "watch": "tsc -watch -p ./"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "doc-tab.edit-comment-in-new-tab",
+        "title": "Doc Tab: Edit Comment In New Tab"
+      }
+    ]
+  },
+  "activationEvents": [],
+  "devDependencies": {
+    "@types/mocha": "^10.0.2",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.83.0",
+    "@typescript-eslint/eslint-plugin": "^6.7.3",
+    "@typescript-eslint/parser": "^6.7.3",
+    "@vscode/test-electron": "^2.3.4",
+    "eslint": "^8.50.0",
+    "glob": "^10.3.3",
+    "mocha": "^10.2.0",
+    "typescript": "^5.2.2"
+  },
+  "engines": {
+    "node": "20",
+    "vscode": "^1.83.0"
+  },
+  "icon": "icon.jpg",
+  "pricing": "Free"
+}
