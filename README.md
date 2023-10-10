@@ -28,6 +28,8 @@ Editors like VSCode support markdown preview for JSDoc / TSDoc, but it's often c
 5. Format the code once again.
 6. Reformat the documentation comments (using [Rewrap](https://marketplace.visualstudio.com/items?itemName=stkb.rewrap)).
 
+[📽️ Youtube Demo](https://youtu.be/mC6cOQaAY-A)
+
 ## Recommended Extensions for Combined Use
 
 - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
