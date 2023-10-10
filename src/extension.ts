@@ -56,12 +56,12 @@ export function activate(context: vscode.ExtensionContext) {
         .lineAt(commentRange.start.line)
         .text.startsWith("/**");
       const eol = editor.document.eol === vscode.EndOfLine.LF ? "\n" : "\r\n";
-      const indent: string | undefined = (() => {
+      const indent: string = (() => {
         if (!startWithComments) {
           return " ".repeat(commentRange.start.character);
         }
         const thisLine = editor.document.lineAt(commentRange.start.line);
-        return thisLine.text.match(/^\s*/)?.[0] || "";
+        return thisLine.text.match(/^\[ \t]*/)?.[0] || "";
       })();
       let commentText = editor.document.getText(commentRange);
       if (startWithComments) {
@@ -106,6 +106,7 @@ export function activate(context: vscode.ExtensionContext) {
             `${!startWithComments ? "" : indent}/**${eol}` +
             mdDoc
               .getText()
+              .trim()
               .split(mdEol)
               .map((line) => `${indent} * ${line}`)
               .join(eol) +
